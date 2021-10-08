@@ -59,13 +59,14 @@ jobs:
     needs:
     - build-docker
 
-    - name: Setup Environment - Set variable `check-if-prelease`
-      id: check-if-prelease
-      uses: actions-ecosystem/action-regex-match@v2
-      with:
-        text: ${{ github.ref }}
-        regex: ^refs\/tags\/v?[0-9]+\.[0-9]+\.[0-9]+\-
-  
+    - run: echo 123
+    # - name: Setup Environment - Set variable `check-if-prelease`
+    #   id: check-if-prelease
+    #   uses: actions-ecosystem/action-regex-match@v2
+    #   with:
+    #     text: ${{ github.ref }}
+    #     regex: ^refs\/tags\/v?[0-9]+\.[0-9]+\.[0-9]+\-
+
   #   - name: Create Release
   #     uses: softprops/action-gh-release@v1
   #     with:
