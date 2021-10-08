@@ -4,7 +4,7 @@ RUN         apk add --virtual .build-deps \
                 build-base \
                 libffi-dev && \
             pip install \
-                devpi-server && \
+                devpi-server==6.2.0 && \
             devpi-init && \
             apk del .build-deps
 
