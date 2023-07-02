@@ -15,7 +15,7 @@ jobs:
       matrix:
         version:
         - "6.9.0"
-        includes:
+        include:
         - version: "6.9.0"
           latest: true
 
