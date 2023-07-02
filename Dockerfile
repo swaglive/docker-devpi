@@ -1,10 +1,12 @@
-FROM        python:3.10-alpine
+FROM        python:3.11-alpine
+
+ARG         version=
 
 RUN         apk add --virtual .build-deps \
                 build-base \
                 libffi-dev && \
             pip install \
-                devpi-server==6.2.0 && \
+                devpi-server==${version} && \
             devpi-init && \
             apk del .build-deps
 
