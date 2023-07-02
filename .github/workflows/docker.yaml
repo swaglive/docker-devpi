@@ -38,7 +38,7 @@ jobs:
       id: qemu
       uses: docker/setup-qemu-action@v2.2.0
       with:
-        platforms: ${{ maxtrix.platforms || env.PLATFORMS || 'linux/amd64' }}
+        platforms: ${{ matrix.platforms || env.PLATFORMS || 'linux/amd64' }}
 
     - name: Setup - Docker buildx
       uses: docker/setup-buildx-action@v2
